@@ -1,0 +1,171 @@
+﻿<Window x:Class="BookStoreManagement.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Book Store - Register"
+        Height="680"
+        Width="650"
+        MinHeight="600"
+        MinWidth="550"
+        WindowStartupLocation="CenterOwner">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="35">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- HEADER -->
+            <StackPanel Grid.Row="0"
+                        Margin="0,0,0,25">
+
+                <TextBlock Text="CREATE ACCOUNT"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Register your Book Store account"
+                           FontSize="14"
+                           Foreground="Gray"
+                           HorizontalAlignment="Center"
+                           Margin="0,8,0,0"/>
+
+                <TextBlock Text="All fields are required (*)"
+                           Foreground="#DC3545"
+                           FontSize="12"
+                           HorizontalAlignment="Center"
+                           Margin="0,8,0,0"/>
+            </StackPanel>
+
+            <!-- ROW 1: USERNAME AND FULL NAME -->
+            <Grid Grid.Row="1" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Username *"
+                               Margin="0,0,0,6"/>
+
+                    <TextBox x:Name="txtUsername"
+                             Height="36"
+                             Padding="8"
+                             MaxLength="50"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Full Name *"
+                               Margin="0,0,0,6"/>
+
+                    <TextBox x:Name="txtFullName"
+                             Height="36"
+                             Padding="8"
+                             MaxLength="150"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- ROW 2: PASSWORD -->
+            <Grid Grid.Row="2" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Password *"
+                               Margin="0,0,0,6"/>
+
+                    <PasswordBox x:Name="pbPassword"
+                                 Height="36"
+                                 Padding="8"
+                                 MaxLength="128"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Confirm Password *"
+                               Margin="0,0,0,6"/>
+
+                    <PasswordBox x:Name="pbConfirmPassword"
+                                 Height="36"
+                                 Padding="8"
+                                 MaxLength="128"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- ROW 3: PHONE AND EMAIL -->
+            <Grid Grid.Row="3" Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Phone Number *"
+                               Margin="0,0,0,6"/>
+
+                    <TextBox x:Name="txtPhone"
+                             Height="36"
+                             Padding="8"
+                             MaxLength="20"
+                             ToolTip="Digits only, 10-20 digits"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <TextBlock Text="Email *"
+                               Margin="0,0,0,6"/>
+
+                    <TextBox x:Name="txtEmail"
+                             Height="36"
+                             Padding="8"
+                             MaxLength="150"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- ROW 4: ADDRESS -->
+            <StackPanel Grid.Row="4"
+                        Margin="0,0,0,20">
+
+                <TextBlock Text="Address *"
+                           Margin="0,0,0,6"/>
+
+                <TextBox x:Name="txtAddress"
+                         Height="65"
+                         Padding="8"
+                         MaxLength="255"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"/>
+            </StackPanel>
+
+            <!-- REGISTER BUTTON -->
+            <Button Grid.Row="5"
+                    x:Name="btnRegister"
+                    Content="CREATE ACCOUNT"
+                    Height="42"
+                    Background="#198754"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    FontSize="15"
+                    Click="btnRegister_Click"/>
+
+            <!-- BACK BUTTON -->
+            <Button Grid.Row="6"
+                    Content="Back to Login"
+                    Height="35"
+                    Margin="0,12,0,0"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="#0D6EFD"
+                    Click="btnBack_Click"/>
+
+        </Grid>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,127 @@
+﻿<Window x:Class="BookStoreManagement.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Book Store - My Profile"
+        Height="650"
+        Width="540"
+        MinHeight="700"
+        MinWidth="480"
+        WindowStartupLocation="CenterOwner"
+        Loaded="Window_Loaded">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="30">
+
+            <!-- HEADER -->
+            <TextBlock Text="MY PROFILE"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Manage your personal information"
+                       FontSize="13"
+                       Foreground="Gray"
+                       HorizontalAlignment="Center"
+                       Margin="0,5,0,25"/>
+
+            <!-- USERNAME -->
+            <TextBlock Text="Username"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,6"/>
+
+            <TextBox x:Name="txtUsername"
+                     Height="36"
+                     Padding="8"
+                     IsReadOnly="True"
+                     Background="#EEEEEE"
+                     Margin="0,0,0,16"/>
+
+            <!-- FULL NAME -->
+            <TextBlock Text="Full Name *"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,6"/>
+
+            <TextBox x:Name="txtFullName"
+                     Height="36"
+                     Padding="8"
+                     MaxLength="150"
+                     Margin="0,0,0,16"/>
+
+            <!-- PHONE -->
+            <TextBlock Text="Phone Number *"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,6"/>
+
+            <TextBox x:Name="txtPhone"
+                     Height="36"
+                     Padding="8"
+                     MaxLength="20"
+                     ToolTip="Digits only, 10-20 digits"
+                     Margin="0,0,0,16"/>
+
+            <!-- EMAIL -->
+            <TextBlock Text="Email *"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,6"/>
+
+            <TextBox x:Name="txtEmail"
+                     Height="36"
+                     Padding="8"
+                     MaxLength="150"
+                     Margin="0,0,0,16"/>
+
+            <!-- ADDRESS -->
+            <TextBlock Text="Address *"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0,6"/>
+
+            <TextBox x:Name="txtAddress"
+                     Height="65"
+                     Padding="8"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     MaxLength="255"
+                     Margin="0,0,0,12"/>
+
+            <!-- REQUIRED FIELD NOTICE -->
+            <TextBlock Text="(*) All profile fields are required."
+                       Foreground="#DC3545"
+                       FontSize="12"
+                       Margin="0,0,0,18"/>
+
+            <!-- CHANGE PASSWORD BUTTON -->
+            <Button x:Name="btnChangePassword"
+                    Content="CHANGE PASSWORD"
+                    Height="40"
+                    Margin="0,0,0,15"
+                    Background="#0D6EFD"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    Click="btnChangePassword_Click"/>
+
+            <!-- SAVE AND CANCEL BUTTONS -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="12"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnSave"
+                        Grid.Column="0"
+                        Content="SAVE CHANGES"
+                        Height="40"
+                        Background="#198754"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="btnSave_Click"/>
+
+                <Button Grid.Column="2"
+                        Content="CANCEL"
+                        Height="40"
+                        Click="btnCancel_Click"/>
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>
